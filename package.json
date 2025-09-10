@@ -1,13 +1,18 @@
+
+
 {
   "name": "tama",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https//lem-anom.github.io/lemagotchi",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pre-deploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
@@ -26,4 +31,7 @@
     "globals": "^16.3.0",
     "vite": "^7.1.2"
   }
+  
 }
+
+
