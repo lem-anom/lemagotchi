@@ -1,5 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
+import petImage from "/public/pet.png";
 
 const Pet = ({petXRef, bounceCount, petRef, isSleeping, isDead, hunger, sleep, boredom}) => {
   const [pos, setPos] = useState(0);
@@ -63,7 +64,7 @@ const Pet = ({petXRef, bounceCount, petRef, isSleeping, isDead, hunger, sleep, b
   return (
     <img
       ref={petRef}
-      src="/alt.svg"
+      src={petImage}
       alt="pet"
       className={`absolute
          bottom-4
