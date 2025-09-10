@@ -1,8 +1,8 @@
 import Stats from "./Stats.jsx";
 import Pet from "./Pet.jsx";
-import popsicle from "./assets/popsicle.svg";
-import snore from "./assets/zzz.svg";
-import bg from "./assets/bg.svg";
+import popsicle from "../assets/popsicle.svg";
+import snore from "../assets/zzz.svg";
+import bg from "../assets/bg.svg";
 
 import {useRef} from "react";
 

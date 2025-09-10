@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
-import petImage from "./assets/alt.png";
+import petImage from "../assets/alt.png";
 
 const Pet = ({petXRef, bounceCount, petRef, isSleeping, isDead, hunger, sleep, boredom}) => {
   const [pos, setPos] = useState(0);
