@@ -1,5 +1,8 @@
 import Stats from "./Stats.jsx";
 import Pet from "./Pet.jsx";
+import popsicle from "./assets/popsicle.svg";
+import snore from "./assets/zzz.svg";
+import bg from "./assets/bg.svg";
 
 import {useRef} from "react";
 
@@ -13,13 +16,14 @@ const Screen = ({petName, hunger, boredom, sleep, isDead
     const containerRef = useRef(null);
 
     return (
-        <div  ref={containerRef} className="relative outline-4 outline-black rounded bg-[url('/bg.jpg')] bg-cover bg-center w-3/5 h-90">
+        <div  style={{backgroundImage: `url(${bg})`}}
+        ref={containerRef} className="relative outline-4 outline-black rounded bg-cover bg-center w-3/5 h-90">
             <Stats isSleeping={isSleeping} petName={petName} boredom={boredom} hunger={hunger} sleep={sleep} />
             <div className="h-full w-full">
                 {popsicles.map(p => (
                     <img
                     key={p.id}
-                    src="/popsicle.svg"
+                    src={popsicle}
                     alt="popsicle"
                     className="absolute w-8 h-auto pointer-events-none"
                     style={{
@@ -32,7 +36,7 @@ const Screen = ({petName, hunger, boredom, sleep, isDead
 
                 {showZzz && petDOMRef.current && (
                     <img
-                    src="/zzz.svg"
+                    src={snore}
                     alt="snore"
                     className="absolute w-10 h-auto pointer-events-none animate-bounce z-50"
                     style={{
